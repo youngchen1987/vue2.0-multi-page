@@ -10,8 +10,9 @@
     "test": ""
   },
   "dependencies": {
-    "vue": "^2.2.1",
-    "babel-runtime": "^6.0.0"
+    "babel-runtime": "^6.0.0",
+    "glob": "^7.1.1",
+    "vue": "^2.2.1"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
@@ -37,6 +38,7 @@
     "vue-html-loader": "^1.0.0",
     "vue-loader": "^11.0.0",
     "vue-style-loader": "^1.0.0",
+    "vue-template-compiler": "^2.2.5",
     "webpack": "^1.12.2",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-hot-middleware": "^2.6.0",
