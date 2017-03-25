@@ -1,5 +1,15 @@
 # vue2.0-multi-page
 
+### 参考UI框架
+
+### 适合PC UI
+
+* <a href="http://www.iviewui.com/">ivew</a> 
+
+* <a href="http://okoala.github.io/">Antd</a>
+
+* <a href="http://museui.github.io/">Muse-UI</a>
+
 > 了解了Vue一般都会去用Vue-cli入门，这是一个构建SPA的脚手架，查看其build的项目，可以看到它是将所有的模块都输出到一个build.js中，有时候会看到这个js文件特别大，有好几兆，然而当一个项目足够复杂时，SPA恐怕不再适合使用了，用户不可能访问你的网页的时候一下子下载一个几兆的文件，特别对于手机用户，可能用户只看了网站中的一篇文章，这也会导致网页加载慢，这是不可取的。所以应该将网站划分成若干模块。 
 参考[https://github.com/jarvan4dev/vue-multi-page] 这个使用的是Vue1.0 因为2.0和1.0相比差距比较大，所以修改为Vue2.0
 
