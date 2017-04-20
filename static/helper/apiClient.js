@@ -39,7 +39,6 @@ let apiClient = function (medthod, urllink, param, successCallback, errorCallbac
         }
       })
   } else if (medthod === 'POST') {
-    if(window.plus) window.plus.nativeUI.showWaiting('loading...')
     Vue.axios.post(urllink, JSON.stringify(param), 
     {
     	'headers': {
@@ -48,20 +47,17 @@ let apiClient = function (medthod, urllink, param, successCallback, errorCallbac
 	      'x-auth-token': (storage.get('user') !== null && storage.get('user') !== undefined) ? storage.get('user').authKey : ''
 	    }
     }).then(function (response) {
-    	 if(window.plus) window.plus.nativeUI.closeWaiting()
       if (response.status === 200) {
         if (successCallback) {
           successCallback(response.data)
         }
       }
     }).catch(function (error) {
-    	if(window.plus) window.plus.nativeUI.closeWaiting()
       if (errorCallback) {
         errorCallback()
       }
     })
   } else if (medthod === 'PUT') {
-  	 if(window.plus) window.plus.nativeUI.showWaiting('loading...')
     Vue.axios.put(urllink, JSON.stringify(param), {'headers': {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
@@ -75,13 +71,11 @@ let apiClient = function (medthod, urllink, param, successCallback, errorCallbac
         }
       }
     }).catch(function (error) {
-    	if(window.plus) window.plus.nativeUI.closeWaiting()
       if (errorCallback) {
         errorCallback()
       }
     })
   } else if (medthod === 'DELETE') {
-  	 if(window.plus) window.plus.nativeUI.showWaiting('loading...')
     Vue.axios.delete(urllink,
     {
     	'headers':{
@@ -91,14 +85,12 @@ let apiClient = function (medthod, urllink, param, successCallback, errorCallbac
 	    },
 	    'params': param
     }).then(function (response) {
-    	 if(window.plus) window.plus.nativeUI.closeWaiting()
       if (response.status === 200) {
         if (successCallback) {
           successCallback(response.data)
         }
       }
     }).catch(function (error) {
-    	if(window.plus) window.plus.nativeUI.closeWaiting()
       if (errorCallback) {
         errorCallback()
       }
